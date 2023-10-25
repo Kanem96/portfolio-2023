@@ -2,7 +2,7 @@
 import { projectsData } from "@/lib/data";
 import React, { FunctionComponent, useRef } from "react";
 import Image from "next/image";
-
+import { motion, useScroll, useTransform } from "framer-motion";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -12,9 +12,23 @@ const Project: FunctionComponent<ProjectProps> = ({
   tags,
   imageUrl,
 }) => {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["0 1", "1.33 1"],
+  });
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
-    <section className="group bg-slate-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem] mb-3 sm:mb-8 last:mb-0 even:pl-8 hover:bg-slate-200 transition">
+    <motion.section
+      ref={ref}
+      style={{
+        scale: scaleProgress,
+        opacity: opacityProgress,
+      }}
+      className="group bg-slate-100 max-w-[42rem] border border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem] mb-3 sm:mb-8 last:mb-0 even:pl-8 hover:bg-slate-200 transition"
+    >
       <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full group-even:ml-[26rem]">
         <h3 className="text-2xl font-semibold">{title}</h3>
         <p className="mt-2 leading-relaxed text-slate-700">{description}</p>
@@ -46,7 +60,7 @@ const Project: FunctionComponent<ProjectProps> = ({
         group-even:group-hover:translate-y-3
         group-even:group-hover:rotate-2"
       />
-    </section>
+    </motion.section>
   );
 };
 

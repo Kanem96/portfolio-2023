@@ -5,7 +5,7 @@ import Project from "./project";
 
 const Projects = () => {
   return (
-    <section>
+    <section id="projects">
       <SectionHeading>Projects</SectionHeading>
       <div>
         {projectsData.map((project, index) => (
