@@ -63,20 +63,20 @@ export const projectsData = [
     description:
       "I worked as a full-stack developer on this bootcamp project. Users can leave reviews on different board games which are fetched from the database server I set up.",
     tags: ["React", "Node.js", "PostgreSQL", "Express"],
-    // imageUrl: corpcommentImg,
+    imageUrl: "corpcommentImg",
   },
-  {
-    title: "Project 2",
-    description: "",
-    tags: [],
-    // imageUrl: rmtdevImg,
-  },
-  {
-    title: "Project 3",
-    description: "",
-    tags: [],
-    // imageUrl: wordanalyticsImg,
-  },
+  // {
+  //   title: "Project 2",
+  //   description: "",
+  //   tags: [],
+  //   imageUrl: "rmtdevImg",
+  // },
+  // {
+  //   title: "Project 3",
+  //   description: "",
+  //   tags: [],
+  //   imageUrl: "wordanalyticsImg",
+  // },
 ] as const;
 
 export const skillsData = [

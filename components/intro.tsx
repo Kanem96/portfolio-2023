@@ -60,7 +60,7 @@ const Intro = () => {
         <a
           href="https://github.com/Kanem96"
           target="blank"
-          className="bg-white p-4 text-slate-700 flex items-center gap-2 rounded-full text-[1.32rem] focus:scale-[1.15] hover:scale-[1.15] hover:text-slate-950 active:scale-105 transition cursor-pointer border border-black/10"
+          className="bg-white p-4 text-slate-700 flex items-center gap-2 rounded-full text-[1.3 srem] focus:scale-[1.15] hover:scale-[1.15] hover:text-slate-950 active:scale-105 transition cursor-pointer border border-black/10"
         >
           <FaGithubSquare />
         </a>
