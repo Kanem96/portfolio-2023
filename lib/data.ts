@@ -2,9 +2,6 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
   {
@@ -66,19 +63,19 @@ export const projectsData = [
     description:
       "I worked as a full-stack developer on this bootcamp project. Users can leave reviews on different board games which are fetched from the database server I set up.",
     tags: ["React", "Node.js", "PostgreSQL", "Express"],
-    imageUrl: corpcommentImg,
+    // imageUrl: corpcommentImg,
   },
   {
     title: "Project 2",
     description: "",
     tags: [],
-    imageUrl: rmtdevImg,
+    // imageUrl: rmtdevImg,
   },
   {
     title: "Project 3",
     description: "",
     tags: [],
-    imageUrl: wordanalyticsImg,
+    // imageUrl: wordanalyticsImg,
   },
 ] as const;
 
