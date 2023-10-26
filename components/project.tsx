@@ -1,10 +1,9 @@
 "use client";
-import { projectsData } from "@/lib/data";
+
 import React, { FunctionComponent, useRef } from "react";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
-
-type ProjectProps = (typeof projectsData)[number];
+import { ProjectProps } from "@/lib/types";
 
 const Project: FunctionComponent<ProjectProps> = ({
   title,

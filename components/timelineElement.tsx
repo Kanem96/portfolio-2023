@@ -1,12 +1,16 @@
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
 import { useInView } from "react-intersection-observer";
+import { ExperienceProps } from "@/lib/types";
+import { FunctionComponent } from "react";
 
-type TimelineElementProps = {
-  item: any;
-};
-
-const TimelineElement = ({ item }: TimelineElementProps) => {
+const TimelineElement: FunctionComponent<ExperienceProps> = ({
+  title,
+  location,
+  description,
+  icon,
+  date,
+}) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
   });
@@ -25,16 +29,16 @@ const TimelineElement = ({ item }: TimelineElementProps) => {
         contentArrowStyle={{
           borderRight: "0.4rem solid #9ca3af",
         }}
-        date={item.date}
-        icon={item.icon}
+        date={date}
+        icon={icon}
         iconStyle={{
           background: "white",
           fontSize: "1.5rem",
         }}
       >
-        <h3 className="font-semibold capitalize">{item.title}</h3>
-        <p className="font-normal !mt-0">{item.location}</p>
-        <p className="!front-normal !mt-1 text-slate-700">{item.description}</p>
+        <h3 className="font-semibold capitalize">{title}</h3>
+        <p className="font-normal !mt-0">{location}</p>
+        <p className="!front-normal !mt-1 text-slate-700">{description}</p>
       </VerticalTimelineElement>
     </div>
   );
