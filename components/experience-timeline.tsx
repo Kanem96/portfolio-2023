@@ -10,11 +10,7 @@ import TimelineElement from "./timeline-element";
 const ExperienceTimeline = () => {
   const { ref } = useSectionInView("Experience");
   return (
-    <section
-      className="my-20 flex w-full scroll-mt-28 flex-col items-center justify-center gap-10"
-      id="experience"
-      ref={ref}
-    >
+    <section className="mb-28 sm:mb-40 scroll-mt-28" id="experience" ref={ref}>
       <SectionHeading>My Experiences</SectionHeading>
       <VerticalTimeline lineColor="#e4e4e7">
         {experiencesData.map((item, index) => (
