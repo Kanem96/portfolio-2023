@@ -5,9 +5,9 @@ import SectionHeading from "./section-heading";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import { experiencesData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
-import TimelineElement from "./timelineElement";
+import TimelineElement from "./timeline-element";
 
-const Experience = () => {
+const ExperienceTimeline = () => {
   const { ref } = useSectionInView("Experience");
   return (
     <section
@@ -25,4 +25,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default ExperienceTimeline;
