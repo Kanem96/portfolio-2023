@@ -44,7 +44,7 @@ const Project: FunctionComponent<ProjectProps> = ({
         </ul>
       </div>
       <Image
-        src={`/imageUrl`}
+        src={imageUrl}
         alt={`Project ${title}`}
         width={200}
         height={200}

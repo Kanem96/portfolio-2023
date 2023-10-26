@@ -59,16 +59,16 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "NC Game Reviews",
+    title: "Personal Website",
     description:
-      "I worked as a full-stack developer on this bootcamp project. Users can leave reviews on different board games which are fetched from the database server I set up.",
-    tags: ["React", "Node.js", "PostgreSQL", "Express"],
-    imageUrl: "corpcommentImg",
+      "I built this website as a way to showcase my skills and experience, but also as a learning opportunity. I used Next.js to utilise powerful SSR and Framer Motion for animations.",
+    tags: ["React", "Next.js", "Framer Motion", "Tailwind"],
+    imageUrl: "/images/website.png",
   },
   // {
-  //   title: "Project 2",
-  //   description: "",
-  //   tags: [],
+  //   title: "NC Game Reviews",
+  //   description: "I worked as a full-stack developer on this bootcamp project. Users can leave reviews on different board games which are fetched from the database server I set up.",
+  //   tags: ["React", "Node.js", "PostgreSQL", "Express"],
   //   imageUrl: "rmtdevImg",
   // },
   // {
