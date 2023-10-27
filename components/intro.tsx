@@ -48,7 +48,7 @@ const Intro = () => {
           className="group bg-slate-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-slate-950 active:scale-105 transition"
           onClick={() => {
             setActiveSection("Contact");
-            setTimeOfLastClick();
+            setTimeOfLastClick(Date.now());
           }}
         >
           Contact me here
