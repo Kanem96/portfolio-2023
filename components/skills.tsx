@@ -17,7 +17,7 @@ const Skills = () => {
       <SectionHeading>Skills</SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-slate-800">
         {skillsData.map((skill, index) => (
-          <li key={index} className="bg-white borderBlack rounded-xl px-5 py-3">
+          <li key={index} className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80">
             {skill}
           </li>
         ))}
