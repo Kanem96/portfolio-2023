@@ -22,10 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${inter.className} bb-slate-50 text-slate-950 relative pt-28 sm:pt-36`}
+        className={`${inter.className} bg-slate-50 text-slate-950 relative pt-28 sm:pt-36 dark:bg-slate-900 dark:text-slate-50`}
       >
-        <div className="bg-[#e9c0e8] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.23rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>
-        <div className="bg-[#c7dae6] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]"></div>
+        <div className="bg-[#e9c0e8] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.23rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]"></div>
+        <div className="bg-[#c7dae6] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]"></div>
 
         <ActiveSectionContextProvider>
           <Header />
