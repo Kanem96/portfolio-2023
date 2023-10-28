@@ -4,12 +4,11 @@ import React from "react";
 import SectionHeading from "./section-heading";
 import { useSectionInView } from "@/lib/hooks";
 import { sendEmail } from "@/actions/sendEmail";
-import { useFormStatus } from "react-dom";
 import SubmitButton from "./submit-button";
+import { toast } from "react-hot-toast";
 
 const Contact = () => {
   const { ref } = useSectionInView("Contact");
-  const { pending } = useFormStatus();
 
   return (
     <section
@@ -26,7 +25,19 @@ const Contact = () => {
         or through this form.
       </p>
 
-      <form action={sendEmail} className="mt-10 flex flex-col">
+      <form
+        action={async (formData) => {
+          const { data, error } = await sendEmail(formData);
+
+          if (error) {
+            toast.error;
+            return;
+          }
+
+          toast.success("Email sent successfully!");
+        }}
+        className="mt-10 flex flex-col"
+      >
         <input
           className="h-14 px-4 rounded-lg borderBlack"
           name="senderEmail"
