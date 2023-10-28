@@ -3,6 +3,7 @@ import "react-vertical-timeline-component/style.min.css";
 import { useInView } from "react-intersection-observer";
 import { ExperienceProps } from "@/lib/types";
 import { FunctionComponent } from "react";
+import { useThemeContext } from "@/context/theme-context";
 
 const TimelineElement: FunctionComponent<ExperienceProps> = ({
   title,
@@ -15,12 +16,15 @@ const TimelineElement: FunctionComponent<ExperienceProps> = ({
     triggerOnce: true,
   });
 
+  const { theme } = useThemeContext();
+
   return (
     <div ref={ref} className="vertical-timeline-element">
       <VerticalTimelineElement
         visible={inView}
         contentStyle={{
-          background: "#f3f4f6",
+          background:
+            theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
           boxShadow: "none",
           border: "1px solid rgba(0, 0, 0, 0.05)",
           textAlign: "left",
