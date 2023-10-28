@@ -12,7 +12,7 @@ const ExperienceTimeline = () => {
   return (
     <section className="mb-28 sm:mb-40 scroll-mt-28" id="experience" ref={ref}>
       <SectionHeading>My Experiences</SectionHeading>
-      <VerticalTimeline lineColor="#e4e4e7">
+      <VerticalTimeline lineColor="">
         {experiencesData.map((item, index) => (
           <TimelineElement key={index} {...item} />
         ))}

@@ -31,18 +31,23 @@ const TimelineElement: FunctionComponent<ExperienceProps> = ({
           padding: "1.3rem 2rem",
         }}
         contentArrowStyle={{
-          borderRight: "0.4rem solid #9ca3af",
+          borderRight:
+            theme === "light"
+              ? "0.4rem solid #9ca3af"
+              : "0.4rem solid rgba(255, 255, 255, 0.05)",
         }}
         date={date}
         icon={icon}
         iconStyle={{
-          background: "white",
+          background: theme === "light" ? "white" : "rgba(255,255,255, 0.05)",
           fontSize: "1.5rem",
         }}
       >
         <h3 className="font-semibold capitalize">{title}</h3>
         <p className="font-normal !mt-0">{location}</p>
-        <p className="!front-normal !mt-1 text-slate-700">{description}</p>
+        <p className="!front-normal !mt-1 text-slate-700 dark:text-white/75">
+          {description}
+        </p>
       </VerticalTimelineElement>
     </div>
   );
