@@ -5,3 +5,5 @@ export type SectionName = (typeof links)[number]["name"];
 export type ProjectProps = (typeof projectsData)[number];
 
 export type ExperienceProps = (typeof experiencesData)[number];
+
+export type Theme = "light" | "dark";
